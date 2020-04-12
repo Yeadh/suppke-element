@@ -148,8 +148,7 @@ class suppke_Widget_order extends Widget_Base {
                               <ul class="nav nav-tabs mb-25" id="myTab" role="tablist">
                                 <?php foreach ( $product_tabs as $key => $product_tab ) : ?>
                                   <li  class="nav-item">
-                                    <a class="nav-link" id="<?php echo esc_attr( $key ); ?>-teb" data-toggle="tab" href="#<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="<?php echo esc_attr( $key ); ?>"
-                                          aria-selected="false">
+                                    <a class="nav-link" id="<?php echo esc_attr( $key ); ?>-teb" data-toggle="tab" href="#<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="<?php echo esc_attr( $key ); ?>" aria-selected="true">
                                       <?php echo wp_kses_post( apply_filters( 'woocommerce_product_' . $key . '_tab_title', $product_tab['title'], $key ) ); ?>
                                     </a>
                                   </li>
