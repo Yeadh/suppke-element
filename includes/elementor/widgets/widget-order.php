@@ -128,7 +128,6 @@ class suppke_Widget_order extends Widget_Base {
                           <h6><?php woocommerce_template_single_price() ?></h6>
                           <div class="product-rating mb-35">
                               <?php woocommerce_template_loop_rating() ?>
-                              <span>(2 Customer Review)</span>
                           </div>
                           <p><?php the_excerpt() ?></p>
                           <div class="perched-info">
