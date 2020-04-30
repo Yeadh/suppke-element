@@ -72,7 +72,7 @@ class suppke_Widget_newsletter extends Widget_Base {
                     <div class="col-12">
                         <div class="newsletter-wrap">
                             <div class="row">
-                                <div class="col-lg-5">
+                                <div class="col-lg-4">
                                     <div class="newsletter-content">
 
                                       <?php if ( '' !== $settings['title'] ): ?>
@@ -84,7 +84,7 @@ class suppke_Widget_newsletter extends Widget_Base {
                                       <?php endif; ?>
                                     </div>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-8">
                                     <div class="newsletter-form">
                                         <?php echo do_shortcode( $settings['shortcode'] ); ?>
                                     </div>

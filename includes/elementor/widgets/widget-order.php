@@ -125,13 +125,13 @@ class suppke_Widget_order extends Widget_Base {
                   <div class="col-xl-5 col-lg-6">
                       <div class="product-details-content">
                           <h3><?php the_title() ?></h3>
-                          <h6><?php woocommerce_template_single_price() ?></h6>
+                          <?php woocommerce_template_single_price() ?>
                           <div class="product-rating mb-35">
                               <?php woocommerce_template_loop_rating() ?>
                           </div>
-                          <p><?php the_excerpt() ?></p>
+                          <?php the_excerpt() ?>
                           <div class="perched-info">
-                              <?php woocommerce_template_single_add_to_cart() ?>
+                              <a class="btn add-card-btn" href="<?php echo esc_url(home_url('/').'checkout/?add-to-cart='.get_the_ID()) ?>" ><?php echo esc_html__('Order Now','suppke') ?></a>
                           </div>
                           <div class="product-info mb-50">
                               <h5>Product info</h5>
@@ -147,7 +147,7 @@ class suppke_Widget_order extends Widget_Base {
                               <ul class="nav nav-tabs mb-25" id="myTab" role="tablist">
                                 <?php foreach ( $product_tabs as $key => $product_tab ) : ?>
                                   <li  class="nav-item">
-                                    <a class="nav-link" id="<?php echo esc_attr( $key ); ?>-teb" data-toggle="tab" href="#<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="<?php echo esc_attr( $key ); ?>" aria-selected="true">
+                                    <a class="nav-link" id="<?php echo esc_attr( $key ); ?>-teb" data-toggle="tab" href="#<?php echo esc_attr( $key ); ?>suppke" role="tab" aria-selected="true">
                                       <?php echo wp_kses_post( apply_filters( 'woocommerce_product_' . $key . '_tab_title', $product_tab['title'], $key ) ); ?>
                                     </a>
                                   </li>
@@ -155,7 +155,7 @@ class suppke_Widget_order extends Widget_Base {
                               </ul>
                               <div class="tab-content" id="myTabContent">
                               <?php foreach ( $product_tabs as $key => $product_tab ) : ?>
-                                <div class="tab-pane fade" id="<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="<?php echo esc_attr( $key ); ?>-tab">
+                                <div class="tab-pane fade" id="<?php echo esc_attr( $key ); ?>suppke" role="tabpanel">
                                   <?php
                                   if ( isset( $product_tab['callback'] ) ) {
                                     call_user_func( $product_tab['callback'], $key, $product_tab );

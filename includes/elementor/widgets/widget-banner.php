@@ -115,7 +115,7 @@ class suppke_Widget_Banner extends Widget_Base {
                             </div>
                             <div class="col-lg-6">
                                 <div class="slider-content">
-                                    <h2 class="wow fadeInUp" data-wow-delay="0.2s"><?php echo $settings['title'] ?></h2>
+                                    <?php echo $settings['title'] ?>
                                     <p class="wow fadeInUp" data-wow-delay="0.4s"><?php echo esc_html( $settings['description'] ) ?></p>
                                     <div class="slider-btn">
                                         <a href="<?php echo esc_url( $settings['btn_url'] ) ?>" class="btn wow fadeInLeft" data-wow-delay="0.6s"><?php echo esc_html( $settings['btn_text'] ) ?></a>
