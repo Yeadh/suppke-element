@@ -80,6 +80,14 @@ class suppke_Widget_Pricing extends Widget_Base {
                   'type'    => Controls_Manager::MEDIA,
                   'dynamic' => [ 'active' => true ],
                ], 
+			   [
+					'name'        => 'tab_active',
+					'label'       => esc_html__( 'Active', 'suppke' ),
+					'type'        => Controls_Manager::TEXT,
+					'dynamic'     => [ 'active' => true ],
+					'default'     => esc_html__( 'Active' , 'suppke' ),
+					'label_block' => true,
+				],	
                [
                   'name'        => 'tab_title',
                   'label'       => esc_html__( 'Title', 'suppke' ),
@@ -191,7 +199,7 @@ class suppke_Widget_Pricing extends Widget_Base {
                         <div class="row">
                            <?php foreach ( $settings['tabs'] as $item ) : ?>
                             <div class="col-lg-4 col-md-6">
-                                <div class="single-pricing text-center mb-30">
+                                <div class="single-pricing text-center mb-30 <?php echo wp_kses_post($item['tab_active']); ?>">
                                     <div class="pricing-head mb-30">
                                        <?php if ( '' !== $item['tab_image'] ): ?>
                                          <div class="pricing-icon mb-15">

@@ -174,7 +174,7 @@ class suppke_Widget_Supplement extends Widget_Base {
                   </div>
               </div>
               <div class="row align-items-center">
-                  <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="col-xl-4 col-lg-6 col-md-6 mb-50">
 
                     <?php foreach ( $settings['tabs'] as $item ) : ?>
                       <div class="single-delivery-services mb-70 pr-40">
@@ -195,7 +195,7 @@ class suppke_Widget_Supplement extends Widget_Base {
                     <?php endforeach; ?>
                   </div>
 
-                  <div class="col-xl-4 d-none d-xl-block">
+                  <div class="col-xl-4 d-none d-xl-block mb-50">
                       <div class="d-services-img">
                           <img src="<?php echo esc_url( $settings['middle_image']['url'] ) ?>" alt="img">
                       </div>

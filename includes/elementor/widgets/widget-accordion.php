@@ -122,60 +122,55 @@ class suppke_Widget_Accordion extends Widget_Base {
       $randID = wp_rand();
 
       $settings = $this->get_settings_for_display(); ?>
-
-
- <!-- faq-area -->
-  <section class="faq-area faq-bg pt-110 pb-120">
-      <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-xl-7 col-lg-8 col-md-10">
-                  <div class="section-title text-center mb-55">
-                      <h2><?php echo $settings['title'] ?></h2>
-                      <div class="bar"></div>
-                      <p><?php echo $settings['description'] ?></p>
-                  </div>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-lg-6">
-                  <div class="faq-img">
-                      <img src="<?php echo esc_url( $settings['image']['url'] ) ?>" alt="img">
-                  </div>
-              </div>
-              <div class="col-lg-6">
-                  <div class="faq-wrapper-padding">
-                      <div class="faq-wrapper">
-                          <div class="accordion" id="accordionExample">
-                              <?php if ( $settings['accordion_list'] ) {
-                                foreach (  $settings['accordion_list'] as $key => $accordion ) { ?>
-
-                                  <div class="card">
-                                      <div class="card-header" id="heading<?php echo $key.$randID ?>">
-                                          <h5 class="mb-0">
-                                              <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapse<?php echo $key.$randID ?>"
-                                                  aria-expanded="false" aria-controls="collapse<?php echo $key.$randID ?>">
-                                                  <?php echo esc_html( $accordion['title'] ); ?>
-                                              </a>
-                                          </h5>
-                                      </div>
-                                      <div id="collapse<?php echo $key.$randID ?>" class="collapse" aria-labelledby="heading<?php echo $key.$randID ?>" data-parent="#accordionExample<?php echo $randID ?>">
-                                          <div class="card-body">
-                                              <p><?php echo esc_html( $accordion['text'] ); ?></p>
-                                          </div>
-                                      </div>
-                                  </div>
-
-                                  <?php } 
-                                } ?>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!-- faq-area-end -->
-
+  <!-- faq-area -->
+	<section class="faq-area faq-bg pt-110 pb-120">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-xl-7 col-lg-8 col-md-10">
+					<div class="section-title text-center mb-55">
+						<h2><?php echo $settings['title'] ?></h2>
+						<div class="bar"></div>
+						<p><?php echo $settings['description'] ?></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="faq-img">
+						<img src="<?php echo esc_url( $settings['image']['url'] ) ?>" alt="img">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="faq-wrapper-padding">
+						<div class="faq-wrapper">
+							<div class="accordion" id="accordionExample">
+								<?php if ( $settings['accordion_list'] ) {
+								foreach (  $settings['accordion_list'] as $key => $accordion ) { ?>
+								<div class="card">
+									<div class="card-header" id="heading<?php echo $key.$randID ?>">
+										<h5 class="mb-0">
+											<a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapse<?php echo $key.$randID ?>" aria-expanded="true" aria-controls="collapse<?php echo $key.$randID ?>">
+												<?php echo esc_html( $accordion['title'] ); ?>
+											</a>
+										</h5>
+									</div>
+									<div id="collapse<?php echo $key.$randID ?>" class="collapse" aria-labelledby="heading<?php echo $key.$randID ?>" data-parent="#accordionExample<?php echo $key.$randID ?>">
+										<div class="card-body">
+											<p><?php echo esc_html( $accordion['text'] ); ?></p>
+										</div>
+									</div>
+								</div>
+								<?php } 
+								} ?>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- faq-area-end -->
       <?php
    }
 

@@ -23,44 +23,6 @@ class suppke_Widget_Counter extends Widget_Base {
    }
 
    protected function _register_controls() {
-
-     $this->start_controls_section(
-         'title_section',
-         [
-            'label' => esc_html__( 'Title Area', 'suppke' ),
-            'type' => Controls_Manager::SECTION,
-         ]
-      );
-
-
-      $this->add_control(
-         'title',
-         [
-            'label' => __( 'Title', 'suppke' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Awesome Supplement For Your
-            Body We Have','suppke')
-         ]
-      );
-       $this->add_control(
-         'color_title',
-         [
-            'label' => __( 'Color Title', 'suppke' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('15 Years Of Experience','suppke')
-         ]
-      );
-
-      $this->add_control(
-         'description',
-         [
-            'label' => __( 'Description', 'suppke' ),
-            'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quasi ut minus labore voluptate natus fuga voluptatum, id architecto velit eum magni nostrum sit mollitia, autem dignissimos, optio officiis? Nesciunt. consectetur adipisicing elit. Sint quasi ut minus labore voluptate natus fuga.','suppke')
-         ]
-      );
-       $this->end_controls_section();
-
       $this->start_controls_section(
          'counter_section',
          [
@@ -120,14 +82,6 @@ class suppke_Widget_Counter extends Widget_Base {
 <!-- fact-area -->
   <section class="fact-area fact-bg">
       <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-xl-8 col-lg-10">
-                  <div class="section-title white-title text-center mb-55">
-                      <h2><?php echo $settings['title'] ?> <span><?php echo $settings['color_title'] ?></span></h2>
-                      <p><?php echo $settings['description'] ?></p>
-                  </div>
-              </div>
-          </div>
           <div class="row">
               <?php foreach (  $settings['counter'] as $counter_single ): ?>
               <div class="col-lg-3 col-sm-6">
